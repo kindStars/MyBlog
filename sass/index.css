@@ -1,5 +1,100 @@
-body, html {
+body, html, ul {
   margin: 0;
   padding: 0; }
+
+ul, li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+#box {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex; }
+  #box .left .home {
+    width: 90px;
+    height: 90px;
+    background-color: #DBA91C;
+    font-size: 20px;
+    color: #121212;
+    font-weight: bold;
+    text-align: center;
+    line-height: 90px;
+    border-radius: 10px;
+    transition: all .5s; }
+    #box .left .home:hover {
+      background: #ffcb22;
+      cursor: pointer; }
+      #box .left .home:hover > a {
+        display: block;
+        width: 90px;
+        height: 90px;
+        font-size: 23px; }
+    #box .left .home > a {
+      color: #000;
+      transition: all .5s; }
+  #box .left nav {
+    width: 90px;
+    height: 705px;
+    background: #333;
+    padding: 10px 0;
+    box-sizing: border-box;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #box .left nav ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #box .left nav ul li {
+        width: 55px;
+        height: 40px;
+        margin: 20px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #box .left nav ul li a {
+          display: block;
+          color: white;
+          text-decoration: none;
+          padding: 5px 10px;
+          border-radius: 4px;
+          transition: background 0.3s; }
+          #box .left nav ul li a:hover {
+            background: #555; }
+        #box .left nav ul li .active {
+          background: #555; }
+  #box #app {
+    width: 1461px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: aliceblue; }
+    #box #app .page {
+      display: none;
+      padding: 20px;
+      animation: fadeIn 0.5s ease; }
+      #box #app .page h1 {
+        margin-bottom: 20px;
+        color: #333; }
+      #box #app .page p {
+        margin-bottom: 15px; }
+    #box #app .active {
+      display: block; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 /*# sourceMappingURL=index.css.map */
