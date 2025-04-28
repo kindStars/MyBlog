@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // 更新导航链接的active类
         navLinks.forEach(link => {
-            link.classList.remove('active');
+            link.classList.remove('active');//把a标签上的所有active类名取消
             if (link.getAttribute('href') === currentHash) {
                 link.classList.add('active');
             }

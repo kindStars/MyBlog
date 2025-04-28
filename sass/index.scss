@@ -45,7 +45,7 @@ a{
     nav {
       width: 90px;
       height:705px;
-      background: #333;
+      background: #121212;
       padding: 10px 0;
       box-sizing: border-box;
       margin-top: 10px;
@@ -85,19 +85,19 @@ a{
     }
   }
   #app {
-    width: 1461px;
-    margin: 0 auto;
+    width: 1476px;
+    margin: 0 0 0 15px;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 10px;
-    background-color: aliceblue;
+    background-color: #121212;
     .page{
       display: none;
       padding: 20px;
-      animation: fadeIn 0.5s ease;
+      animation: fadeIn 2s ease;
+      color: #fff;
       h1 {
         margin-bottom: 20px;
-        color: #333;
       }
       p {
         margin-bottom: 15px;
