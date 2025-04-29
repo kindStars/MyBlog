@@ -1,4 +1,4 @@
-body, html, ul, p {
+body, html, ul, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
 
@@ -75,7 +75,7 @@ a {
           background: #555;
           color: #ffcb22; }
   #box #app {
-    width: 1476px;
+    flex: 1;
     margin: 0 0 0 15px;
     box-sizing: border-box;
     border-radius: 10px;
@@ -166,11 +166,40 @@ a {
                 padding: 30px;
                 box-sizing: border-box;
                 background-color: #1a1a1a; }
+                #box #app .page .scroll_home .home_count .home_count_inner .service_list > li h3 {
+                  font-size: 16px;
+                  color: #e0e0e0;
+                  margin-bottom: 30px; }
+                  #box #app .page .scroll_home .home_count .home_count_inner .service_list > li h3 > span {
+                    color: #DBA91C; }
+                #box #app .page .scroll_home .home_count .home_count_inner .service_list > li .service_introduce {
+                  line-height: 17px;
+                  margin-bottom: 23px;
+                  overflow: hidden; }
+                #box #app .page .scroll_home .home_count .home_count_inner .service_list > li .order {
+                  display: inline-block;
+                  position: relative;
+                  cursor: pointer; }
+                  #box #app .page .scroll_home .home_count .home_count_inner .service_list > li .order::before {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background-color: #DBA91C;
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                    transition: all 1s ease; }
+                  #box #app .page .scroll_home .home_count .home_count_inner .service_list > li .order:hover::before {
+                    width: 64px;
+                    cursor: pointer; }
               #box #app .page .scroll_home .home_count .home_count_inner .service_list .remove {
                 opacity: 0;
-                transform: translatey(100px) scale(0.8); }
+                transform: translatey(20px) scale(0.8);
+                transition: all .5s ease; }
               #box #app .page .scroll_home .home_count .home_count_inner .service_list .remove_1 {
-                animation: show 1s ease-in-out forwards; }
+                transform: translate(0) scale(1);
+                opacity: 1; }
     #box #app .active {
       display: block; }
 
@@ -178,12 +207,6 @@ a {
   from {
     opacity: 0; }
   to {
-    opacity: 1; } }
-@keyframes show {
-  0% {
-    opacity: 0; }
-  100% {
-    transform: translate(0) scale(1);
     opacity: 1; } }
 .about_2 {
   height: 100vh; }

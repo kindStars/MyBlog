@@ -86,7 +86,9 @@ function riseUp() {
 // 清除
 function remove_riseUp() {
     remove.forEach(el=>{
-         return el.classList.remove('remove_1');
+        if(el.classList.contains('remove_1')) {
+            el.classList.remove('remove_1');
+        }
     })
 }
 //监听滚动
@@ -95,7 +97,6 @@ function  scroll_fun(el){
     el.addEventListener('scroll', function() {
         let scrollPosition = this.scrollTop
         if (scrollPosition >= 50) {
-            console.log('111')
             riseUp();
         }
         if(scrollPosition <50){

@@ -1,4 +1,4 @@
-body,html,ul,p{
+body,html,ul,p,h1,h2,h3,h4,h5,h6{
   margin: 0;
   padding: 0;
 }
@@ -87,7 +87,8 @@ a{
     }
   }
   #app {
-    width: 1476px;
+    //width: 1476px;
+    flex: 1;
     margin: 0 0 0 15px;
     //padding: 20px;
     box-sizing: border-box;
@@ -194,13 +195,48 @@ a{
                 padding: 30px;
                 box-sizing: border-box;
                 background-color: #1a1a1a;
+                h3{
+                  font-size: 16px;
+                  color: #e0e0e0;
+                  margin-bottom: 30px;
+                  >span{
+                    color: #DBA91C;
+                  }
+                }
+                .service_introduce{
+                  line-height: 17px;
+                  margin-bottom: 23px;
+                  overflow: hidden;
+                }
+                .order{
+                  display: inline-block;
+                  position: relative;
+                  cursor: pointer;
+                  &::before{
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background-color: #DBA91C;
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                    transition: all 1s ease;
+                  }
+                  &:hover::before{
+                    width: 64px;
+                    cursor: pointer;
+                  }
+                }
               }
               .remove{
                 opacity: 0;
-                transform: translatey(100px) scale(.8);
+                transform: translatey(20px) scale(.8);
+                transition: all .5s ease;
               }
               .remove_1{
-                animation: show 1s ease-in-out forwards;
+                transform: translate(0) scale(1);
+                opacity: 1;
               }
             }
           }
@@ -219,17 +255,6 @@ a{
   from { opacity: 0; }
   to { opacity: 1; }
 }
-//模块显示动画
-@keyframes show {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    transform: translate(0) scale(1);
-    opacity: 1;
-  }
-}
-
 
 
 .about_2{
