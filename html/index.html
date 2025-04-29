@@ -23,11 +23,35 @@
         </div>
         <div id="app">
             <div id="home" class="page active">
-                <h1>欢迎来到首页</h1>
-                <p>这是一个单页面应用的示例。点击上面的链接可以在不同视图之间切换而不刷新整个页面。</p>
+                <div class="scroll_home">
+                    <div class="home_outBox">
+                        <div class="home_outBox_inner">
+                            <div class="avatar_out">
+                                <img class="avatar_img" src="../image/bg.png" alt="">
+                                <p class="author">ZhangChenYang</p>
+                                <p class="introduce">I'm a <span class="change_txt"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home_count">
+                        <div class="home_count_inner">
+                            <div class="service">
+                                <span>SERVICES</span>
+                                <div class="botLine"></div>
+                                <span>01</span>
+                            </div>
+                            <ul class="service_list">
+                                <li>1</li>
+                                <li>2</li>
+                                <li class="remove">3</li>
+                                <li class="remove">4</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div id="about" class="page">
+            <div id="about" class="page about_2">
                 <h1>关于我们</h1>
                 <p>我们是一家专注于Web开发的公司，致力于提供高质量的解决方案。</p>
             </div>
@@ -51,5 +75,6 @@
         </div>
     </div>
     <script src="./../js/index.js"></script>
+    <script src="../js/home.js"></script>
 </body>
 </html>
