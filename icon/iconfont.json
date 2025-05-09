@@ -1,0 +1,37 @@
+{
+  "id": "4911900",
+  "name": "个人博客",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4546550",
+      "name": "csdn",
+      "font_class": "csdn",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "4937000",
+      "name": "github-fill",
+      "font_class": "github-fill",
+      "unicode": "e885",
+      "unicode_decimal": 59525
+    },
+    {
+      "icon_id": "10636151",
+      "name": "gitee",
+      "font_class": "gitee",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "28650243",
+      "name": "微信公众号",
+      "font_class": "weixingongzhonghao",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    }
+  ]
+}

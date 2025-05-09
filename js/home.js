@@ -77,15 +77,20 @@ typeWriter(typingElement, texts,{
 
 // 获取元素
 const remove = document.querySelectorAll('.remove');
+let service_02 = document.querySelectorAll('.service_02');
+let service_03 = document.querySelectorAll('.service_03');
+let service_02_list = document.querySelectorAll('.service_02_list li');
+let Reviews_list = document.querySelectorAll('.Reviews_list');
+let tab = document.querySelectorAll('.tab');
 // 添加上升类
-function riseUp() {
-    remove.forEach(el=>{
+function riseUp(element) {
+    element.forEach(el=>{
         return el.classList.add('remove_1');
     })
 }
 // 清除
-function remove_riseUp() {
-    remove.forEach(el=>{
+function remove_riseUp(element) {
+    element.forEach(el=>{
         if(el.classList.contains('remove_1')) {
             el.classList.remove('remove_1');
         }
@@ -93,16 +98,54 @@ function remove_riseUp() {
 }
 //监听滚动
 let home = document.querySelector('.scroll_home');
-function  scroll_fun(el){
-    el.addEventListener('scroll', function() {
+function  scroll_fun(el,px){
+    home.addEventListener('scroll', function() {
         let scrollPosition = this.scrollTop
-        if (scrollPosition >= 50) {
-            riseUp();
+        if (scrollPosition >= px) {
+            riseUp(el);
         }
-        if(scrollPosition <50){
-            remove_riseUp()
+        if(scrollPosition < px){
+            remove_riseUp(el)
         }
     })
 }
-scroll_fun(home)
+scroll_fun(remove,90)
+scroll_fun(service_02,165)
+scroll_fun(service_02_list,220)
+scroll_fun(service_03,520)
+scroll_fun(Reviews_list,620)
+scroll_fun(tab,800)
+
+
+
+//tab切换
+/*
+* 1.获取事件源
+* 2.
+* */
+//视口
+let Reviews_lists = document.querySelectorAll('.Reviews_list li');
+//切换按钮
+let Reviews_tabs = document.querySelectorAll('.Reviews_tab li');
+Reviews_tabs.forEach(btn=>{
+    btn.addEventListener('click', function(e) {
+        // 初始化状态
+        Reviews_tabs.forEach(el=>{
+            el.classList.remove('tab_active');
+        })
+        Reviews_lists.forEach(content=>{
+            content.classList.remove('list_active','prev');
+        })
+        //给当前点击的按钮添加样式
+        this.classList.add('tab_active');
+        //获取对应的面板
+        const tabId = this.getAttribute('data-tab');
+        //获取当前点击时的面板
+        const activePhone = document.getElementById(tabId);
+        //获取到点击的时候对应的面板的索引
+        const index = Array.from(Reviews_lists).indexOf(activePhone);
+        // //显示新的内容
+        activePhone.classList.add('list_active');
+    })
+})
 
